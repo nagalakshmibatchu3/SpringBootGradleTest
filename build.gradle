@@ -19,17 +19,20 @@ sourceCompatibility = '1.8'
 
 repositories {
 	mavenCentral()
+	jCenter()
 }
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testCompile 'junit:junit:4.12'
+    compile 'junit:junit:4.12'
 }
 
-/*sourceSets {
-    test {
+sourceSets {
+    main {
         java {
-            srcDirs = ["test/model"]
+            srcDir 'src'
         }
     }
-}*/
+}
